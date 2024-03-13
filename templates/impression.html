@@ -2,6 +2,10 @@
 {% block content %}
 <a href="/" role="button">ホームへ</a>
 <h1>今日着たい洋服の印象を選んでください。</h1>
-<a href="/color_result">前ページへ</a>
+<form method="POST">
+  <label><input type="radio" name="imp" value=""></label><br>
+  <label><input type="radio" name="imp" value=""></label><br>
+  <label><input type="radio" name="imp" value=""></label><br>
+</form>
 <a href="/coordination_result">コーディネートを提案</a>
 {% endblock %}

@@ -30,7 +30,7 @@ def extract_dominant_color(image_path, clusters=5):
     return dominant_color
 
 # 画像パスを指定
-image_path = input('static/images/clothes_black.jpg') #服の画像を入れてね
+image_path = input('服の画像を入れてね') #服の画像を入れてね static/images/clothes_black.jpg
 
 # 画像から支配的な色を抽出
 dominant_color_rgb = extract_dominant_color(image_path)

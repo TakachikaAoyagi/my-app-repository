@@ -8,6 +8,9 @@ from sqlalchemy.orm import DeclarativeBase
 from sqlalchemy import Integer
 from datetime import datetime
 import pytz
+from color_model1 import find_closest_color
+from color_model1 import extract_dominant_color
+from color_model1 import get_dominant_color_name
 
 #データベース---------------------------------------------------------------------------------------------------------
 class Base(DeclarativeBase):
@@ -32,18 +35,28 @@ with app.app_context():
 
 #ページ遷移----------------------------------------------------------------------------------------------------------------
 @app.route('/', methods=['GET','POST'])
-def index():
+def home():
     if request.method == 'POST':
-        images = request.form.get('images')
-        color_name = request.form.get('color_name')
-
-        lists = image_list(images=images, color_name=color_name)
-
+        image_path = request.form.get('images')
+        the_closest_color_name = get_dominant_color_name(image_path)
+        lists = image_list(images=image_path, color_name=the_closest_color_name)
         db.session.add(lists)
         db.session.commit()
-        return redirect('/data_list')
+        return render_template('color_result.html', image_path = image_path, color_name = the_closest_color_name)
     else:
         return render_template('home.html')
+
+
+@app.route('/color_result')
+def color():
+        return render_template('color_result.html')
+
+
+@app.route('/data_list')
+def list():
+        all_lists = image_list.query.all()
+        return render_template('data_list.html', all_lists=all_lists)
+
 
 @app.route('/<int:id>/update', methods=['GET','POST'])
 def update(id):
@@ -53,31 +66,22 @@ def update(id):
     else:
         lists.images = request.form.get('images')
         lists.color_name = request.form.get('color_name')
-
         db.session.commit()
         return redirect('/data_list')
+
 
 @app.route('/<int:id>/delete', methods=['GET'])
 def delete(id):
     lists = image_list.query.get(id)
-
     db.session.delete(lists)
     db.session.commit()
     return redirect('/data_list')
 
-@app.route('/data_list', methods=['GET','POST'])
-def list():
-    if request.method == 'GET':
-        all_lists = image_list.query.all()
-        return render_template('data_list.html', all_lists=all_lists)
-
-@app.route('/color_result')
-def color():
-    return render_template('color_result.html')
 
 @app.route('/impression')
 def impression():
     return render_template('impression.html')
+
 
 @app.route('/coordination_result')
 def coordination():
@@ -85,3 +89,5 @@ def coordination():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+

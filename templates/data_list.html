@@ -7,11 +7,11 @@
   <h2>洋服{{ lists.id }}</h2>
   <a href="/{{lists.id}}/update" role="button">編集</a>
   <a href="{{lists.id}}/delete" role="button">削除</a><br>
-  <img src="static/images/{{ lists.images }}" alt="洋服の写真" width="100">
+  <a href="/impression"><img src="{{ lists.images }}" alt="洋服の写真" width="200"></a>
   <p> 色名：{{ lists.color_name }}</p>
   <p>作成日時：{{ lists.created_at }}</p>
 </div>
 {% endfor %}
-<a href="/">前ページへ</a>
-<a href="/color_result">結果を表示</a>
+<a href="/color_result">前ページへ</a>
+<a href="/impression">印象選択</a>
 {% endblock %}
