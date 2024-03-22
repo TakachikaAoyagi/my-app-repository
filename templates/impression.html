@@ -1,11 +1,18 @@
 {% extends "base.html" %}
 {% block content %}
-<a href="/" role="button">ホームへ</a>
-<h1>今日着たい洋服の印象を選んでください。</h1>
-<form method="POST">
-  <label><input type="radio" name="imp" value=""></label><br>
-  <label><input type="radio" name="imp" value=""></label><br>
-  <label><input type="radio" name="imp" value=""></label><br>
-</form>
-<a href="/coordination_result">コーディネートを提案</a>
+<h3 class="hh3">今日着たい洋服の印象を選んでください。</h3>
+<!-- <img src="{{ user_image }}" alt="ユーザ画像" width="200"> -->
+<div>
+  <form id="form2" method="POST">
+    <div class="ff-container">
+      {% for i in colors %}
+      <div class="ff-item font"><label><input type="radio" name="imp" value="{{ i }}">{{ i }}</label></div>
+      {% endfor %}
+    </div>
+    <div id="re">
+      <input type="submit" value="結果">
+    </div>
+  </form>
+</div>
+<!-- <a href="/coordination_result">コーディネートを提案</a> -->
 {% endblock %}

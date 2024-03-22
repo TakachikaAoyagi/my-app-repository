@@ -1,13 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>色弱でもコーデ選びに迷わない！</h1>
-<h2>編集画面</h2>
-<form method="POST">
-  <label for="images">画像を登録</label><br>
-  <input type="file" id="images" name="images" accept=".png, .jpg, .jpeg" value="{{ lists.images }}"><br>
-  <label for="color_name">色を登録</label><br>
-  <input type="text" name="color_name" value="{{ lists.color_name }}"><br>
-  <input type="submit" value="更新">
-</form>
-<a href="/data_list">保存データ一覧へ</a>
+<h1>編集画面</h1>
+<div id="up">
+  <form class="form" method="POST">
+    <div id="f1"><label for="images">洋服の画像を変更</label></div>
+    <div class="f2"><input type="text" size="50" name="images"></div>
+    <label for="color_name">色名を変更</label><br>
+    <input type="text" name="color_name" value="{{ lists.color_name }}"><br>
+    <div class="f2"><input type="submit" value="更新する"></div>
+  </form>
+</div>
 {% endblock %}

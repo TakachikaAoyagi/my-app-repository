@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
-<a href="/" role="button">ホームへ</a>
-<h1>この組み合わせを提案します。</h1>
-<a href="/impression">前ページへ</a>
+<div id="rec">
+  <h1>この色の洋服がオススメです！</h1>
+</div>
+<div id="result2">
+  <font color="{{ result_sub_color_eng }}">{{ result_sub_color }}</font>
+</div>
+<!-- <a href="/impression">前ページへ</a> -->
 {% endblock %}

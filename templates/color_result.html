@@ -1,8 +1,20 @@
 {% extends "base.html" %}
 {% block content %}
-<a href="/" role="button">ホームへ</a><br>
-<img src="{{ image_path }}" alt="画像" width="200">
-<h1>この洋服の色は{{ color_name }}です。</h1>
-<a href="/">前ページへ</a>
-<a href="/data_list">データリストへ</a>
+
+<div id="img2"><img src="{{ image_path }}" alt="画像"></div>
+<div>
+  <h1>この洋服の色は</h1>
+</div>
+<div id="result1">
+  <font color="{{ main_color_eng_result }}">
+    <h1>{{ color_name }}</h1>
+  </font>
+</div>
+<div>
+  <h1>です</h1>
+</div>
+<!-- <a href="/">前ページへ</a> -->
+<div id="a">
+  <a href="/data_list">データリストへ</a>
+</div>
 {% endblock %}

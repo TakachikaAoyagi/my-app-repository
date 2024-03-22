@@ -3,10 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="../static/css/index.css">
   <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kosugi&family=Murecho:wght@100..900&family=Young+Serif&display=swap" rel="stylesheet">
+  
+  <link href="https://fonts.googleapis.com/earlyaccess/kokoro.css" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Aoboshi+One&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div id="head1">
+    <header class="page-header wrap">
+      <h2>Fasion Co<font color="blue">l</font>ordinator</h2>
+      <nav>
+        <ul class="main-navi">
+          <li><a href="/">HOME</a></li>
+          <li><a href="/data_list">LIST</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
   {% block content %}
   {% endblock %}
+  <footer class="float-clear">
+    <div>
+      <p><small>&copy; copyright t.aoyagi</small></p>
+    </div>
+  </footer>
 </body>
 </html>

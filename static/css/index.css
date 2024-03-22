@@ -1,0 +1,229 @@
+/* 共通部分--------------------------------------------------------------------------------- */
+/* Header---------------------------------------------- */
+#head1 {
+  background-image: url(/static/images/image1.jpg);
+  
+}
+#title {
+  width: 300px;
+}
+h2 {
+  color: #000;
+  position: relative;
+  padding: 1rem 2rem calc(1rem + 8px);
+  background: #fff;
+}
+h2:before {
+  position: absolute;
+  top: -13px;
+  left: -13px;
+  width: 100%;
+  height: 100%;
+  content: '';
+  border: 4px solid #000;
+}
+.page-header {
+  display: flex;
+  justify-content: space-between;
+}
+.wrap {
+  max-width: 80%;
+  margin: 0 200% 0 3%;
+}
+.main-navi {
+  display: flex;
+  font-size: 1em;
+  list-style-type: none;
+  margin-top: 30%;
+}
+.main-navi li {
+  margin-left: 15%;
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  background-color: #fff;
+  border-radius: 50vh;
+  color: #fff;
+  text-align: center;
+}
+.main-navi a {
+  text-decoration: none;
+  color: #61425e;
+}
+.main-navi a:hover {
+  color: aqua;
+}
+
+
+/* Body------------------------------------------------ */
+body {
+  background-color: #f9eee8;
+  color: black;
+  font-size: 120%;
+  font-weight: 5%;
+}
+h1 {
+  text-align: center;
+  font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+}
+.hh3 {
+  font-size: 200%;
+  text-align: center;
+  margin-top: 5%;
+}
+.form {
+  text-align: center;
+  margin-top: 5%;
+}
+img {
+  width: 240px;
+  height: 320px;
+}
+.f1 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 5%;
+  font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+}
+.f2 {
+  margin-top: 2%;
+  margin-bottom: 5%;
+}
+
+
+/* Fooder----------------------------------------------- */
+footer{
+  background-color: #61425e;
+  text-align: center;
+  margin-bottom: 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+}
+footer p{
+  color: #fff;
+  font-size: 0.9em; 
+}
+
+
+/* home.html------------------------------------------------------------------------------------- */
+#text {
+  text-align: center;
+  margin-top: 5%;
+  line-height: 300%;
+  font-size: 100%;
+  font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+  font-style: normal;
+  font-weight: bold;
+}
+#shi {
+  font-size: 30px;
+}
+.bor {
+  border: 2px solid #f4c3ca;
+  background-color: #f4c3ca;
+  margin: 2% 20%;
+}
+
+/* data_list.html------------------------------------------------------------------------------------- */
+h1 {
+  margin: 0;
+  margin-top: 2%;
+  font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+}
+h3 {
+  font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+}
+.f-container{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: 10%;
+}
+.f-item{
+  width: 50%;
+  margin: 3% 0;
+}
+.f-item a {
+  text-decoration: none;
+  color: #61425e;
+}
+.f-item-a:hover {
+  color: pink;
+}
+#image1 {
+  width: 240px;
+  height: 320px;
+}
+
+/* color_result.html------------------------------------------------------------------------------------- */
+#result1 {
+  text-align: center;
+  font-size: 250%;
+  font-family: "Aoboshi One", serif;
+  font-weight: 400;
+  font-style: normal;
+  -webkit-text-stroke:0.5px #000;
+}
+#img2 {
+  text-align: center;
+  margin-top: 5%;
+}
+#a {
+  text-align: right;
+  margin-top: 5%;
+  margin-right: 3%;
+  margin-bottom: 5%;
+}
+
+/* impression.html------------------------------------------------------------------------------------- */
+.ff-container{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 20%;
+}
+.ff-item {
+  margin: 1% 3%;
+  width: 30%;
+}
+.font {
+  font-size: 150%;
+}
+#re {
+  color: royalblue;
+  text-align: center;
+  margin-top: 3%;
+}
+#form2 {
+  margin-top: 2%;
+}
+
+/* coordination_result.html------------------------------------------------------------------------------------- */
+#rec {
+  margin-top: 8%;
+}
+#result2 {
+  text-align: center;
+  font-size: 1000%;
+  font-family: "Aoboshi One", serif;
+  font-weight: 400;
+  font-style: normal;
+  -webkit-text-stroke:0.5px #000;
+  margin-top: 2%;
+}
+
+/* update.html------------------------------------------------------------------------------------- */
+#up {
+  margin-top: 10%;
+  border: 2px solid #f4c3ca;
+  background-color: #f4c3ca;
+  margin: 2% 20%;
+}

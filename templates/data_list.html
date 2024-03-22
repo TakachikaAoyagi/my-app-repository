@@ -1,17 +1,20 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>洋服リスト</h1>
-<a href="/" role="button">ホームへ</a>
-{% for lists in all_lists %}
 <div>
-  <h2>洋服{{ lists.id }}</h2>
-  <a href="/{{lists.id}}/update" role="button">編集</a>
-  <a href="{{lists.id}}/delete" role="button">削除</a><br>
-  <a href="/impression"><img src="{{ lists.images }}" alt="洋服の写真" width="200"></a>
-  <p> 色名：{{ lists.color_name }}</p>
-  <p>作成日時：{{ lists.created_at }}</p>
+  <h1>洋服リスト</h1>
 </div>
-{% endfor %}
-<a href="/color_result">前ページへ</a>
-<a href="/impression">印象選択</a>
+<div class="f-container">
+  {% for lists in all_lists %}
+    <div class="f-item">
+      <h3>洋服{{ lists.id }}</h3>
+      <a class="f-item-a" href="/{{ lists.id }}/update" role="button">編集</a>
+      <a class="f-item-a" href="/{{ lists.id }}/delete" role="button">削除</a><br>
+      <a href="/{{ lists.id }}/impression"><img id="image1" src="{{ lists.images }}" alt="洋服の写真"></a>
+      <p> 色名：{{ lists.color_name }}</p>
+      <p>登録日時：{{ lists.created_at }}</p>
+    </div>
+  {% endfor %}
+</div>
+<!-- <a href="/color_result">前ページへ</a> -->
+<!-- <a href="/impression">印象選択</a> -->
 {% endblock %}

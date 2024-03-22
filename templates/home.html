@@ -1,10 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>色弱でもコーデ選びに迷わない！</h1>
-<form method="POST">
-  <label for="images">画像を登録</label><br>
-  <input type="text" name="images"><br>
-  <input type="submit" value="新規登録">
-</form>
-<a href="/data_list">データリストへ</a>
+<div id="text">
+  このアプリは、色の見え方が異なる <strong id="shi">色弱</strong> の人が日々の洋服選びで迷うことがないようにとの願いから開発されました。<br>
+  AIが洋服の色を判別してその洋服に合った色を提案してくれます。<br>
+  洋服選びで悩んでいる色弱の人は、このアプリで日々の悩みを解消しましょう！
+</div>
+<div class="bor">
+  <form class="form" method="POST">
+    <div id="f1"><label for="images">洋服の画像を入力してください</label></div>
+    <div class="f2"><input type="text" size="50" name="images"></div>
+    <div class="f2"><input type="submit" value="色を判別する"></div>
+  </form>
+</div>
 {% endblock %}
